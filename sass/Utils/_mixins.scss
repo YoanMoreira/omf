@@ -1,0 +1,73 @@
+                                         /*general_mixins*/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+                                        /*mixin_animation*/
+@mixin anim-loading($anim-name) {
+    animation: $anim-name 3s ease both;
+}
+@mixin anim-loading-delay ($anim-name) {
+    animation: $anim-name 3s ease .4s both;
+}
+@mixin loading-general-settings {
+    animation: anim-disapear 3.2s ease-out both;
+}
+
+                                        /*mixins_functionning*/
+@mixin design-card-function {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 70px;
+    border-radius: 15px;   
+    margin: 10px 0 10px 0;
+    background: $background-color;
+    box-shadow: $shadow-color 0 5px 10px;
+}
+@mixin number-circle($value) {
+    content: $value;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 0 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: -12px;
+    background-color: $color-primary;
+    color: white;
+}
+@mixin hover-card-function {
+    background-color: $hover-color;
+    transition: .2s ease-in;
+    & i{
+        color: $color-primary;
+    }
+}
+
+
+                                        /*mixins_card_menu*/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin shadow {
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
+}
+
+                                        /*mixins_menu_appearance*/
+@mixin delay-anim-menu ($value){
+    transform-origin: top;
+    animation: anim-appearance-delay $value+1s ease-in;
+}
