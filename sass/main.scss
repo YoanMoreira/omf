@@ -1,3 +1,21 @@
+                                     /*import_general*/
+@import "../sass/Base/reset";
+@import "../sass/Base/font";
+@import "../sass/Utils/variables";
+@import "../sass/Utils/mixins";
+                                    /*import_animation*/
+@import "../sass/Layout/loading-anim";
+@import "../sass/Composants/heart-anim";
+                                    /*import_design*/
+@import "../sass/Layout/header";
+@import "../sass/Composants/card-functionning";
+@import "../sass/Composants/card-restaurants"; 
+@import "../sass/Composants/button";                                        
+@import "../sass/Layout/footer";
+@import "../sass/Layout/restaurants-page";
+
+
+
 h1{
     background-color: black;
 }
