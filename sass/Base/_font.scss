@@ -1,0 +1,74 @@
+@import "../Utils/variables";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+ul{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+input{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: .9rem;
+    color: #353535;
+}
+.titles{
+    font-family: 'Shrikhand', cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.new_headband{
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 450;
+        font-size: .8rem;
+        color: $new-headband-text-color;
+    }
+}
+.functionning_card--text{
+    font-family: 'Roboto', sans-serif;
+        font-weight: 450;
+}
+.functionning_card > ::before{
+    font-family: 'Roboto', sans-serif;
+        font-weight: 450;
+        font-size: .8rem;
+}
+
+                                        /*restaurant_page_font*/
+
+.restaurant_titles{
+    & h1{
+        font-family: 'Shrikhand', cursive;
+        font-weight: lighter;
+        font-size: 1.7rem;
+    }
+}
+.restaurant_menu{
+    & h2{
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-weight: 350;
+    }
+    .food-card{
+    &--price, &--meal_name{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+    }
+    }
+}
+
