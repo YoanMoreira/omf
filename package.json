@@ -1,0 +1,22 @@
+{
+  "name": "omf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoanMoreira/omf.git"
+  },
+  "author": "Yoan Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoanMoreira/omf/issues"
+  },
+  "homepage": "https://github.com/YoanMoreira/omf#readme",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
