@@ -1,0 +1,98 @@
+                                        /*import_general*/
+@import "../Base/reset";
+@import "../Base/font";
+@import "../Utils/variables";           
+
+@mixin restaurant_card_mix {
+        height: 270px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        box-shadow: 0px 5px 20px $shadow-color;
+        margin-top: 5%;
+        margin-bottom: 15px;
+        position: relative;
+}
+
+                                        /*main_design*/
+
+.restaurants_card--01{
+    @include restaurant_card_mix;
+    &:hover{
+        transform: scale(1.01);
+        transition: transform .2s ease;
+    }
+}
+.restaurants_card--02{
+    @include restaurant_card_mix;
+    &:hover{
+        transform: scale(1.01);
+        transition: transform .2s ease;
+    }
+}
+.restaurants_card--03{
+    @include restaurant_card_mix;
+    &:hover{
+        transform: scale(1.01);
+        transition: transform .2s ease;
+    }
+}
+.restaurants_card--04{
+    @include restaurant_card_mix;
+    &:hover{
+        transform: scale(1.01);
+        transition: transform .2s ease;
+    }
+}
+
+.new_headband{
+    height: 25px;
+    width: 70px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 5px $shadow-color;
+    background-color: $background-new;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.card_img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+.card_infos{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.restaurants_card--text{
+    padding: 5%;
+}
+.heart-icon{
+    position: relative;
+    right: 5%;
+}
+
+
+                                        /*responsive_design*/
+
+                    /*responsive_tablet*/
+@media only screen and (min-width: 450px){
+    .card_infos{
+        height: 23%;
+    }
+} 
+
+                    /*responsive_desktop*/
+@media only screen and (min-width: 1024px){
+    .card_infos{
+        height: 20%;
+    }
+} 

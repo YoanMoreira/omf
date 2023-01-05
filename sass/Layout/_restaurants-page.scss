@@ -1,0 +1,121 @@
+                                        /*import_general*/
+@import "../Base/reset";
+@import "../Base/font";
+@import "../Utils/variables";
+@import "../Utils/mixins";
+                                        /*import_animation*/
+@import "../Layout/loading-anim";
+@import "../Composants/heart-anim";
+                                        /*import_design*/
+@import "../Composants/menu-appearance-anim";
+@import "../Composants/card-functionning";
+@import "../Composants/card-restaurants";
+@import "../Composants/button";
+@import "../Composants/card-menu";
+@import "../Layout/footer";
+
+                                        /*header_design*/
+.back_header{
+    font-size: 1.2rem;
+    justify-self: flex-start;
+    position: absolute;
+    left: 5%;
+}
+
+                                        /*main_design*/
+
+.main{
+    background-color: $background-color;
+}                                        
+.page_contents{
+    max-width:1280px;
+    min-height:100%;
+    margin: 0 auto;
+    position:relative;
+}
+.restaurant_img{
+    z-index: -5;
+    & img{
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    }
+}
+.menu_wrapper{
+    width: 100%;
+    height: auto;
+    background-color: $background-color;
+    border-radius: 40px 40px 0 0;
+    padding: 10% 5% 5% 5%;
+    position: relative;
+    top: -45px;
+}
+.restaurant_titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+    .heart-icon{
+        position: relative;
+        right: 0;
+    }
+}
+.restaurant_menu{
+    display: grid;
+    grid-template-columns: 1fr;    
+    &-starter, &-dish, &-dessert{
+        margin: 5% 0;
+    }
+}
+
+.menu_type{
+    margin-bottom: 7%;
+    &::after{
+        content: "";
+        background-color: $color-tertiary;
+        height: 3px;
+        width: 45px;
+        position: relative;
+        left: 0;
+        top: 8px;
+        display: block;
+    }
+}
+.order_button{
+    margin-top: 8%;
+    position: relative;
+    left: 20%;
+    @include button;
+}
+
+                                        /*responsive_design*/
+
+                    /*responsive_tablet*/
+@media only screen and (min-width: 450px){
+    .menu_wrapper{
+        padding: 5%;
+    }
+    .restaurant_titles{
+        margin-bottom: 2%;
+    }
+    .order_button{
+        margin-top: 0;
+        left: 27%;
+    }
+} 
+
+                    /*responsive_desktop*/
+@media only screen and (min-width: 1024px){
+    .card_infos{
+        height: 20%;
+    }
+    .restaurant_menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2%;
+    }   
+    .order_button{
+        margin-top: 5%;
+        left: 37%;
+    }
+} 
