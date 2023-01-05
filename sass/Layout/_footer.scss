@@ -1,0 +1,37 @@
+.footer{
+    height: 180px;
+    width: 100%;
+    background: #353535;
+    padding: 20px;
+    h1{
+        font-size: 1.2rem;
+        font-weight: lighter;
+        color: white;
+    }
+}
+.footer_text{
+    margin: 10px 0;
+   li{
+       margin: 5px;
+   }
+   i{
+       font-size: .8rem;
+       margin-right: 5px;
+   } 
+}
+
+                                        /*responsive_design*/
+
+                    /*responsive_tablet*/
+@media only screen and (min-width: 450px){
+    .footer{
+        height: 160px;
+        padding: 20px 50px;
+    }
+    .footer_text{
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+} 
+

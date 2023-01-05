@@ -458,6 +458,42 @@ input {
     width: 15%;
   }
 }
+.footer {
+  height: 180px;
+  width: 100%;
+  background: #353535;
+  padding: 20px;
+}
+.footer h1 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: white;
+}
+
+.footer_text {
+  margin: 10px 0;
+}
+.footer_text li {
+  margin: 5px;
+}
+.footer_text i {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+/*responsive_design*/
+/*responsive_tablet*/
+@media only screen and (min-width: 450px) {
+  .footer {
+    height: 160px;
+    padding: 20px 50px;
+  }
+  .footer_text {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 h1 {
   background-color: black;
 }
