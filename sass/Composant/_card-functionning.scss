@@ -1,0 +1,45 @@
+                                        /*import_general*/
+@import "../Base/reset";
+@import "../Base/font";
+@import "../Utils/variables";           
+@import "../Utils/mixins";
+
+                                        /*main_design*/
+.functionning_card{
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    &--1{
+        @include design-card-function;
+        &::before{
+            @include number-circle("1");
+        }
+        &:hover{
+            @include hover-card-function;
+        }
+    }
+    &--2{
+        @include design-card-function;
+        &::before{
+            @include number-circle("2");
+        }
+        &:hover{
+            @include hover-card-function;
+        }
+    }
+    &--3{
+        @include design-card-function;
+        &::before{
+            @include number-circle("3");
+        }
+        &:hover{
+            @include hover-card-function;
+        }
+    }
+    &--icon{
+        font-size: 1.2rem;
+        color: $icon-color;
+        margin-right: 30px;
+    }    
+}
+

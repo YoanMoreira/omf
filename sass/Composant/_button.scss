@@ -1,0 +1,28 @@
+@import "../Utils/variables";
+
+@mixin button {
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        box-shadow: #a5a5a5 0 5px 10px;
+        border-radius: 25px;
+        padding: 15px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        width: 62%;
+        max-width: 300px;
+        & p{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            color: white;
+        }
+        &:hover{
+            transform: scale(1.01);
+            transition: transform 0.1s ease; 
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), $gradient-color;
+            & p{
+                color: $color-primary;
+            }
+        }
+}
+
