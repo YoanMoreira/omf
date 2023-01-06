@@ -1,24 +1,117 @@
-                                     /*import_general*/
+                                        /*import_general*/
 @import "../sass/Base/reset";
 @import "../sass/Base/font";
 @import "../sass/Utils/variables";
 @import "../sass/Utils/mixins";
-                                    /*import_animation*/
+                                        /*import_animation*/
 @import "../sass/Layout/loading-anim";
-
-                                    /*import_design*/
-@import "../sass/Layout/header"; 
-@import "../sass/Composant/card-functionning";
-@import "../sass/Composant/button";                                     
+@import "../sass/Composants/heart-anim";
+                                        /*import_design*/
+@import "../sass/Layout/header";
+@import "../sass/Composants/card-functionning";
+@import "../sass/Composants/card-restaurants";
+@import "../sass/Composants/button";
 @import "../sass/Layout/footer";
+@import "../sass/Layout/restaurants-page";
 
 
-
-
-h1{
-    background-color: black;
-}
-body{
-    margin: 50px;
+                                        /*main_design*/
+.page_contents{
+    max-width:1280px;
+    min-height:100%;
+    margin: 0 auto;
+    position:relative;
     
+   
 }
+
+                    /*search_formular*/
+.search{
+    &_formular{
+        height: 45px;
+        width: 100%;
+        background: #eaeaea;
+        box-shadow: 0 2px 2px inset lightgrey;
+        @include flex-center;
+        margin: 0;
+    }
+    &_icon{
+        color: #353535;
+        font-size: .9rem;
+        position: relative;
+        left: 15px;
+    }
+    &_input{
+        position: relative;
+        left: 30px;
+    }
+}
+
+                    /*presentation_part*/
+.presentation{
+    width: 100%;
+    @include column-center;
+    padding: 10% 5% 15% 5%;
+    background-color: #f6f6f6;
+    &_text{
+        text-align: center;
+        h1{
+            padding: 0 10% 4%;
+        }
+        p{
+            margin-bottom: 10%;
+        }
+    }
+    &_button{
+        @include button;
+    }
+}
+
+                    /*functionning_part*/
+.functionning{
+    padding: 13% 5%;
+    &_card{
+        @include column-center;
+        margin-top: 10%;
+    }
+}
+
+                    /*restaurant_part*/
+#restaurants{
+    width: 100%;
+    padding: 13% 5% 13% 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+}
+
+
+                                        /*responsive_design*/
+
+                    /*responsive_tablet*/
+@media only screen and (min-width: 450px){
+    .presentation{
+        padding: 10% 5% 10% 5%;
+    }
+    
+                        /*functionning_part*/
+    .functionning{
+        padding: 0% 5%;
+        &_card{
+            margin-top: 3%;
+        }
+    }
+    
+                        /*restaurant_part*/
+    #restaurants{
+        padding: 5%;
+
+    }
+} 
+
+                    /*responsive_desktop*/
+@media only screen and (min-width: 1024px){
+    .presentation{
+        padding: 5%;
+    }
+} 
