@@ -1,0 +1,95 @@
+                                        /*general_settings*/
+@import "../Base/reset";
+@import "../Base/font";
+@import "../Utils/variables";  
+@import "../Utils/mixins";
+
+
+                                                                /*food_card_design_settings*/
+.food-card{
+    width: 100%;
+    height: 70px;
+    background: white;
+    border-radius: 15px;
+    @include shadow;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+    &--price{
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-left: 7px;
+    }
+    &-text{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-validation{
+        height: 100%;
+        background-color: $color-tertiary;
+        border-radius: 0 15px 15px 0;
+        position: absolute;
+        right: 0px;
+        padding: 0 13px;
+        display: none;
+    }
+    &--meal{
+        margin-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        & p {
+            margin: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
+
+
+                                                                /*food_card_animation*/
+
+.food-card:hover {
+    & > .food-card-validation{
+        @include flex-center;
+        animation: slide .5s ease-in-out;
+        transform-origin: right; 
+    }
+    & > .food-card-text{
+        padding-right: 50px;
+        transition: .5s ease-in-out;
+    }
+}
+.food-card-validation{
+    i{
+    color: white;
+    font-size: 1.5rem;
+    transform: rotate(180deg);
+    animation: rotate .45s ease-in both;
+   }
+}
+
+@keyframes slide {
+    0% {
+        transform: scaleX(0);
+}
+    100% {
+        transform: scaleX(1);
+}
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+}
+100% {
+        transform: rotate(360deg);
+}
+}
+
+
